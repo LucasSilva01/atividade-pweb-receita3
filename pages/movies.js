@@ -7,7 +7,7 @@ function Index({ movies }) {
       <h1>Filmes</h1>
       {movies.Search.map(
           (m) => <div className = {styles.container}>
-              <br/>{m.Title} --- {m.Year}<br/>
+              <br/>{m.Title} --- {m.Year}<br/><img src={m.Poster}></img>
               </div>)}
     </div>
   )
