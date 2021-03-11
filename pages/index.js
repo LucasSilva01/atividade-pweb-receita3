@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className = {styles.container}>
         <Link href = '/movies' >
-         <a className = {styles.card}>Clique</a>
+         <a className = {styles.card}>Clique para ver todos os filmes do Titanic</a>
         </Link>
     </div>
   )

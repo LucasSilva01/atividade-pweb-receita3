@@ -3,11 +3,12 @@ import styles from '../styles/Home.module.css'
 
 function Index({ movies }) {
   return (
-    <div>
-      <h1>Filmes</h1>
+    <div className = {styles.container}>
+      <h1>Filmes sobre o Titanic</h1>
       {movies.Search.map(
-          (m) => <div className = {styles.container}>
-              <br/>{m.Title} --- {m.Year}<br/><img src={m.Poster}></img>
+          (m) => <div className = {styles.card}>
+              
+              <br/>Título: {m.Title} <br/>Ano de lançamento:  {m.Year}<br/><img src={m.Poster}></img>
               </div>)}
     </div>
   )
@@ -15,7 +16,7 @@ function Index({ movies }) {
 
 const Filmes = async function () {
   return await axios.get(
-    'http://www.omdbapi.com/?apikey=d72bbb8f&s=Luta').then(
+    'http://www.omdbapi.com/?apikey=d72bbb8f&s=Titanic').then(
       function (filmes) {
         return ({
           movies: filmes.data
@@ -30,6 +31,7 @@ export function getServerSideProps() {
     const data = await Filmes();
     return {
       props: data
+
     }
   }
   return sec();
