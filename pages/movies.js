@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 function Index({ movies }) {
   return (
     <div className = {styles.container}>
-      <h1>Filmes sobre o Titanic</h1>
+      <h1>Filmes da Marvel</h1>
       {movies.Search.map(
           (m) => <div className = {styles.card}>
               
@@ -16,7 +16,7 @@ function Index({ movies }) {
 
 const Filmes = async function () {
   return await axios.get(
-    'http://www.omdbapi.com/?apikey=d72bbb8f&s=Titanic').then(
+    'http://www.omdbapi.com/?apikey=d72bbb8f&s=Marvel').then(
       function (filmes) {
         return ({
           movies: filmes.data
