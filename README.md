@@ -11,7 +11,7 @@ git clone https://github.com/LucasSilva01/atividade-pweb-receita3
 
 Logo após, navegue até a pasta do projeto e execute a instrução a seguir para instalar as dependências necessárias:
 ```bash
-npm install
+yarn add
 ```
 
 ##
